@@ -4,6 +4,7 @@ import {RouterOutlet} from '@angular/router';
 import {OrdersComponent} from "./pages/orders/orders.component";
 import {ProductsComponent} from "./pages/products/products.component";
 import {MainComponent} from "./pages/main/main.component";
+import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import {MainComponent} from "./pages/main/main.component";
     RouterOutlet,
     OrdersComponent,
     ProductsComponent,
-    MainComponent
+    MainComponent,
+    NavBarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
