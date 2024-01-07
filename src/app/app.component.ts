@@ -15,7 +15,7 @@ import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
     OrdersComponent,
     ProductsComponent,
     MainComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
