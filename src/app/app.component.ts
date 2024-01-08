@@ -6,6 +6,7 @@ import {ProductsComponent} from "./pages/products/products.component";
 import {MainComponent} from "./pages/main/main.component";
 import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

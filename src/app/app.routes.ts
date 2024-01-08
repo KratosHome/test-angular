@@ -4,6 +4,7 @@ import {OrdersComponent} from "./pages/orders/orders.component";
 import {ProductsComponent} from "./pages/products/products.component";
 import {PageNotFoundComponent} from "./pages/page-not-found/page-not-found.component";
 import {LoginComponent} from "./pages/login/login.component";
+import {authGuard} from "./guards/auth.guards";
 
 export const routes: Routes = [
 
@@ -11,19 +12,17 @@ export const routes: Routes = [
     path: '',
     title: 'Main',
     component: LoginComponent,
- //   canActivate: [AuthGuard],
+    canActivate: [authGuard(['admin', 'consultant'])],
   },
   {
     path: 'orders',
     component: OrdersComponent,
-  //  canActivate: [AuthGuard, RoleGuard],
-    data: {role: ['admin', 'consultant']}
+    canActivate: [authGuard(['admin', 'consultant'])],
   },
   {
     path: 'products',
     component: ProductsComponent,
-   //  canActivate: [AuthGuard, RoleGuard],
-    data: {role: ['admin']}
+    canActivate: [authGuard(['admin', 'manager'])],
   },
   {
     path: '**',
