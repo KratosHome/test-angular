@@ -1,53 +1,26 @@
-<form
-  [formGroup]="userDate"
-  (ngSubmit)="onSubmit()"
-  class="container-login"
->
-
-  <div>
-    <div>
-      <label for="email">email</label>
-      <input type="text" id="email" placeholder="email" formControlName="email" required>
-      <div
-        *ngIf="userDate.controls['email'].invalid && (userDate.controls['email'].dirty || userDate.controls['email'].touched)">
-        <div *ngIf="userDate.controls['email'].hasError('required')">email is required</div>
-        <div *ngIf="userDate.controls['email'].hasError('email')">email is not valid</div>
-      </div>
-    </div>
-
-    <label for="password">password</label>
-    <input type="password" id="password" placeholder="pass" formControlName="password" required>
-
-    <button [disabled]="!userDate.valid" type="submit">submit</button>
-  </div>
-
-
-
-
-  <form [formGroup]="userDate" (ngSubmit)="onSubmit()">
-    <app-may-input
-      label="email"
-      type="text"
-      placeholder="email"
-      [required]="true"
-      formControlName="email"
-      [control]="userDate.controls['email']"
-      [errors]="[{type: 'required', text: 'Email is required'}, {type: 'email', text: 'Email is not valid'}]">
-    </app-may-input>
-
-    <app-may-input
-      label="password"
-      type="password"
-      placeholder="pass"
-      [required]="true"
-      formControlName="password"
-      [control]="userDate.controls['password']">
-    </app-may-input>
-
-    <button [disabled]="!userDate.valid" type="submit">submit</button>
-  </form>
-
-
+<form [formGroup]="userDate" (ngSubmit)="onSubmit()">
+  <app-may-input
+    label="email"
+    type="text"
+    placeholder="email"
+    [required]="true"
+    controlName="email"
+    [formGroup]="userDate"
+    [errors]="[
+      { type: 'required', message: 'Email is required' },
+      { type: 'email', message: 'Email is not valid' }
+    ]"
+  >
+  </app-may-input>
+  <app-may-input
+    label="password"
+    type="password"
+    placeholder="password"
+    [required]="true"
+    controlName="password"
+    [formGroup]="userDate"
+  >
+  </app-may-input>
+  <button [disabled]="!userDate.valid" type="submit">submit</button>
 </form>
-
 
