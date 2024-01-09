@@ -1,0 +1,15 @@
+.container-login {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    border: 1px solid black;
+    background-color: rgba(33, 35, 196, 0.2);
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+  }
+}

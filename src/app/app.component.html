@@ -1,4 +1,10 @@
 <div class="container-app">
-  <app-nav-bar></app-nav-bar>
-  <router-outlet></router-outlet>
+  <app-nav-bar *ngIf="this.loginServices.isAuthSign()"></app-nav-bar>
+  <div class="wrapper">
+    <div class="container-switch">
+      <button (click)="toggleTheme()">theme</button>
+      <button>language</button>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>

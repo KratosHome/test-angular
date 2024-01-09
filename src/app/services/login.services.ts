@@ -6,11 +6,11 @@ import {API_URL} from "../constants/constnts";
 import {catchError, tap} from "rxjs";
 
 @Injectable({
-  providedIn: "any"
+  providedIn: "root"
 })
 export class LoginServices {
-  isAuthSign = signal<boolean>(true)
-  roleSign = signal<string>("admin")
+  isAuthSign = signal<boolean>(false)
+  roleSign = signal<string>("")
 
   constructor(
     private readonly http: HttpClient,

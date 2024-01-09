@@ -7,11 +7,15 @@ import {LoginComponent} from "./pages/login/login.component";
 import {authGuard} from "./guards/auth.guards";
 
 export const routes: Routes = [
-
+  {
+    path: 'login',
+    title: 'login',
+    component: LoginComponent,
+  },
   {
     path: '',
     title: 'Main',
-    component: LoginComponent,
+    component: MainComponent,
     canActivate: [authGuard(['admin', 'consultant'])],
   },
   {

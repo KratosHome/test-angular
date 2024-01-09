@@ -6,6 +6,22 @@
 
 .container-app {
   margin: -8px;
-  height: 100vh;
+  height: 100svh;
+  width: 100vw;
   display: flex;
+  background-color: var(--background-color);
+  padding: 20px;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.container-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  width: 100%;
+  gap: 10px;
 }

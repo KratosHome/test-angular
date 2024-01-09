@@ -2,11 +2,12 @@ import {Component} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgIf} from "@angular/common";
 import {LoginServices} from "../../services/login.services";
+import {MayInputComponent} from "../../components/ui/may-input/may-input.component";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, NgIf],
+  imports: [ReactiveFormsModule, NgIf, MayInputComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
