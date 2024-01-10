@@ -2,11 +2,17 @@
   [data-theme="light"] {
     --background-color: #d1bdbb;
     --text-color: #0b090a;
+    --text-color-error: #a92828;
+    --input-background-color: #ceb8b8;
+    --input-border: #361b1b;
   }
 
   [data-theme="dark"] {
     --background-color: #112144;
     --text-color: #ffffff;
+    --text-color-error: #f20606;
+    --input-background-color: #a7a2a2;
+    --input-border: #d98d49;
   }
 
   [name="theme-color"] {

@@ -1,0 +1,36 @@
+.container-input {
+  position: relative;
+  margin-bottom: 20px;
+
+  label {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    color: var(--text-color);
+    padding: 0 5px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 55%, /* прозорий (тут можна змінити на будь-який інший колір) */
+        var(--input-background-color) 45% /* вказаний фоновий колір */
+    );
+  }
+
+  input {
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--input-background-color);
+
+    &::placeholder {
+      color: var(--text-color);
+      opacity: 0.5;
+    }
+  }
+
+  .wrapper-error {
+    position: absolute;
+    left: 10px;
+    color: var(--text-color-error);
+  }
+}

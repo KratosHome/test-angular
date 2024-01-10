@@ -1,4 +1,4 @@
-<div [formGroup]="formGroup">
+<div [formGroup]="formGroup" class="container-input">
   <label [for]="controlName">{{ label }}</label>
   <input
     formControlName="{{controlName}}"
@@ -7,7 +7,7 @@
     [placeholder]="placeholder"
     [required]="required"
   >
-  <div *ngIf="formGroup.controls[controlName].invalid && (formGroup.controls[controlName].dirty || formGroup.controls[controlName].touched)">
+  <div class="wrapper-error" *ngIf="formGroup.controls[controlName].invalid && (formGroup.controls[controlName].dirty || formGroup.controls[controlName].touched)">
     <div *ngFor="let error of errors">
       <div *ngIf="formGroup.controls[controlName].hasError(error.type)">{{error.message}}</div>
     </div>

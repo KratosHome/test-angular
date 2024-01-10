@@ -1,26 +1,32 @@
-<form [formGroup]="userDate" (ngSubmit)="onSubmit()">
-  <app-may-input
-    label="email"
-    type="text"
-    placeholder="email"
-    [required]="true"
-    controlName="email"
-    [formGroup]="userDate"
-    [errors]="[
+<form [formGroup]="userDate" (ngSubmit)="onSubmit()" class="container-login">
+  <div>
+    <app-may-input
+      label="email"
+      type="text"
+      placeholder="email"
+      [required]="true"
+      controlName="email"
+      [formGroup]="userDate"
+      [errors]="[
       { type: 'required', message: 'Email is required' },
       { type: 'email', message: 'Email is not valid' }
     ]"
-  >
-  </app-may-input>
-  <app-may-input
-    label="password"
-    type="password"
-    placeholder="password"
-    [required]="true"
-    controlName="password"
-    [formGroup]="userDate"
-  >
-  </app-may-input>
-  <button [disabled]="!userDate.valid" type="submit">submit</button>
+    >
+    </app-may-input>
+    <app-may-input
+      label="password"
+      type="password"
+      placeholder="password"
+      [required]="true"
+      controlName="password"
+      [formGroup]="userDate"
+    >
+    </app-may-input>
+    <app-my-btn
+      text="submit"
+      [disabled]="!userDate.valid"
+      type="submit"
+    ></app-my-btn>
+  </div>
 </form>
 

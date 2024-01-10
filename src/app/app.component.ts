@@ -6,6 +6,7 @@ import {ProductsComponent} from "./pages/products/products.component";
 import {MainComponent} from "./pages/main/main.component";
 import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
 import {LoginServices} from "./services/login.services";
+import {MyBtnComponent} from "./components/ui/my-btn/my-btn.component";
 
 
 @Component({
@@ -18,6 +19,7 @@ import {LoginServices} from "./services/login.services";
     ProductsComponent,
     MainComponent,
     NavBarComponent,
+    MyBtnComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

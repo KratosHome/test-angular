@@ -1,0 +1,16 @@
+.container-btn {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: var(--text-color);
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  &:disabled {
+    background-color: red;
+  }
+}
